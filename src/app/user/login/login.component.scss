@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  &__form {
+    min-width: 350px;
+  }
+  &__form-field {
+    display: block;
+  }
+}

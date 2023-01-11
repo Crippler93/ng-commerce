@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>E-commerce</span>
+  <span class="header__spacer"></span>
+  <a *ngIf="loggedIn" routerLink="user/logout" mat-button class="header__button">
+    Sign out
+    <mat-icon>logout</mat-icon>
+  </a>
+  <a *ngIf="!loggedIn" routerLink="user/new" mat-button class="header__button">
+    Sign Up
+    <mat-icon>person</mat-icon>
+  </a>
+  <a *ngIf="!loggedIn" routerLink="user/login" mat-button class="header__button">
+    Login
+    <mat-icon>login</mat-icon>
+  </a>
+</mat-toolbar>

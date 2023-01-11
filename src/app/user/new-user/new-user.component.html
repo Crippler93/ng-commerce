@@ -1,0 +1,23 @@
+<form class="form" [formGroup]="form" (ngSubmit)="createUser()">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input formControlName="name" matInput>
+    <mat-hint>Enter full name</mat-hint>
+    <mat-error>Required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input formControlName="email" matInput>
+    <mat-error *ngIf="getErrors('email')?.email">Invalid Email</mat-error>
+    <mat-error *ngIf="getErrors('email')?.required">Required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" formControlName="password" matInput>
+    <mat-error>Required</mat-error>
+  </mat-form-field>
+
+  <button [disabled]="!form.valid" type="submit" mat-raised-button color="primary">Submit</button>
+</form>
