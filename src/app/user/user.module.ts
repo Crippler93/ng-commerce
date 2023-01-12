@@ -6,12 +6,14 @@ import { UserRoutingModule } from './user-routing.module';
 import { NewUserComponent } from './new-user/new-user.component';
 import { UserMaterialModule } from './user-material.module';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
   declarations: [
     NewUserComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,

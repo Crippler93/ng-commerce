@@ -1,5 +1,5 @@
-<p>Login</p>
-<form [formGroup]="form" class="login__form">
+<p class="login__title">Login</p>
+<form [formGroup]="form" class="login__form" (ngSubmit)="submit()">
   <mat-form-field class="login__form-field">
     <mat-label>Email</mat-label>
     <input matInput type="email" formControlName="email" >

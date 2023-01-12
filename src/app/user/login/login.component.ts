@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LocalhostService } from 'src/app/services/localhost/localhost.service';
+
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +15,15 @@ export class LoginComponent implements OnInit{
     password: ['', [Validators.required]]
   })
 
-  constructor(private fb: FormBuilder, private ls: LocalhostService, private router: Router) {}
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
-    this.ls.logout();
+    this.authService.logout();
   }
 
   submit() {
     if (this.form.valid) {
-      this.ls.loginSuccess();
+      this.authService.loggedIn();
       this.router.navigate(['/products']);
     }
   }

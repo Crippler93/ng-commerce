@@ -8,4 +8,5 @@ import { Component, Input, OnInit } from "@angular/core";
 export class NavBarComponent {
   @Input() loggedIn = false;
 
+
 }

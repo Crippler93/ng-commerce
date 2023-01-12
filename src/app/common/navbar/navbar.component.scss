@@ -5,5 +5,8 @@
 
   &__button {
     text-decoration: none;
+    &.active {
+      color: gold;
+    }
   }
 }
